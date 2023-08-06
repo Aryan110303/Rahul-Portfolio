@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+    <link href="index.css" rel="stylesheet" />
+    <title>Rahul's Portfolio</title>
+</head>
+
+<body>
+    <div class="transition transition-3 is-active"></div>
+    <div class="mobile-nav-screen is-active"></div>
+    <div class="container">
+        <div class="blue_square"></div>
+        <div class="dots">
+            <div class="dot_1"></div>
+            <div class="dot_2"></div>
+            <div class="dot_3"></div>
+            <div class="dot_4"></div>
+            <div class="dot_5"></div>
+            <div class="dot_6"></div>
+            <div class="dot_7"></div>
+            <div class="dot_8"></div>
+            <div class="dot_9"></div>
+            <div class="dot_10"></div>
+            <div class="dot_11"></div>
+            <div class="dot_12"></div>
+            <div class="dot_13"></div>
+            <div class="dot_14"></div>
+            <div class="dot_15"></div>
+            <div class="dot_16"></div>
+            <div class="dot_17"></div>
+            <div class="dot_18"></div>
+            <div class="dot_19"></div>
+            <div class="dot_20"></div>
+            <div class="dot_21"></div>
+            <div class="dot_22"></div>
+            <div class="dot_23"></div>
+            <div class="dot_24"></div>
+            <div class="dot_25"></div>
+            <div class="dot_26"></div>
+            <div class="dot_27"></div>
+        </div>
+        <div class="small_squares">
+            <div class="small_square_1"></div>
+            <div class="small_sqaure_2"></div>
+        </div>
+        <div class="navbar">
+            <a href="./index.html"><img class="logo" src="./letter-r-logo-design-logo-template-creative-r-logo-vector-symbol_487414-3674-removebg-preview.png" alt=""></a>
+            <div class="navbar_links">
+                <a href="./index.html" class="home">Home</a>
+                <a href="./about.html" class="about">About</a>
+                <a target="_blank" href="./contactform.html" class="contact_me">Contact Me</a>
+            </div>
+            <!-- <ul>
+                <li><a target="_blank" href="https://www.facebook.com/gaurrahul?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/MadcapR?s=20"><i class="fa fa-twitter"></i></a></li>
+                <li><a target="_blank" href="http://linkedin.com/in/gaur-rahul94"><i class="fa fa-linkedin"></i></a></li>
+                <li><a target="_blank" href="https://instagram.com/madcapr?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a></li>
+            </ul> -->
+            <div class="btn_wrap">
+                <span>Share</span>
+                <div class="mobile-share">
+                    <a target="_blank" href="https://www.facebook.com/gaurrahul?mibextid=ZbWKwL">
+                    <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a target="_blank" href="https://twitter.com/MadcapR?s=20">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                    <a target="_blank" href="http://linkedin.com/in/gaur-rahul94">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a target="_blank" href="https://instagram.com/madcapr?igshid=MzRlODBiNWFlZA==">
+                    <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+          </div>
+        <div class="main_sec">
+            <div class="hal main_photo">
+            <img class="profile_pic" src="./Recent_Picture_-_Rahul-removebg-preview.png" alt="">
+            </div>
+            <div class="hal set">
+                <h2 class="hello">Hello!</h2>
+                <h1 class="name">I'm Rahul</h1>
+                <div class="type-text">
+                <h3>I'm <span class="auto-type"></span></h3>
+                </div>
+                <button name="name" value="value" type="submit" class="hire_me" onclick=" window.location.href = 'contactform.html';">Hire Me</button>
+                <div class="mobile-buttons">
+                    <button name="about" value="value" type="submit" class="mobile-about" onclick=" window.location.href = 'about.html';">About Me</button>
+                    <button name="contact" value="value" type="submit" class="mobile-contact" onclick=" window.location.href = 'contactform.html';">Contact Me</button>
+                </div>
+            </div>
+            <div class="information_group">
+                <div class="information1">
+                    <h3>2.5 Years</h3>
+                    <p>Experience</p>
+                </div>
+                <div class="information2">
+                    <h3>99.8%</h3>
+                    <p>Cutomer Satisfaction</p>
+                </div>
+                <div class="information3">
+                    <h3>Key Skills</h3>
+                    <p>Project and Risk Management<br>
+                    Business Analysis<br>
+                    Management Consulting</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+    <script>
+        var typed = new Typed(".auto-type",{
+            strings:["an IT Risk Consultant","a Certified Scrum Master","an ISO Certified Lead Auditor","an Amateur Astro Photographer"],
+            typeSpeed:50,
+            backSpeed:45,
+            loop:true
+        })
+        var lFollowX = 0,
+            lFollowY = 0,
+            x = 0,
+            y = 0,
+            friction = 1 / 30;
+
+        function moveBackground() {
+        x += (lFollowX - x) * friction;
+        y += (lFollowY - y) * friction;
+        
+        translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+        $('.profile_pic').css({
+            '-webit-transform': translate,
+            '-moz-transform': translate,
+            'transform': translate
+        });
+            $('.pg').css({
+            '-webit-transform': translate,
+            '-moz-transform': translate,
+            'transform': translate
+        });
+
+        window.requestAnimationFrame(moveBackground);
+        }
+
+        $(window).on('mousemove click', function(e) {
+
+        var lMouseX = Math.max(-100, Math.min(100, $(window).width() / 2 - e.clientX));
+        var lMouseY = Math.max(-100, Math.min(100, $(window).height() / 2 - e.clientY));
+        lFollowX = (20 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+        lFollowY = (10 * lMouseY) / 100;
+
+        });
+
+        moveBackground();
+
+    </script>
+    <script>
+       var loader = document.getElementById("base");
+
+       window.addEventListener("load", function(){
+            loader.style.display="none";
+       })
+    </script>
+
+    <script>
+        window.onload = () => {
+      const transition_el = document.querySelector('.transition');
+      setTimeout(()=>{
+        transition_el.classList.remove('is-active');
+      },500);
+    }
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

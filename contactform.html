@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <a href="index.html"><div class="back_btn"><i class="fa fa-chevron-left"></i> Back</div></a>
+    <div class="rain front-row"></div>
+    <div class="rain back-row"></div>
+    <div class="toggles" style="display: none;">
+      <div class="splat-toggle toggle active">SPLAT</div>
+      <div class="back-row-toggle toggle active">BACK<br>ROW</div>
+      <div class="single-toggle toggle">SINGLE</div>
+    </div>
+    <div class="transition transition-3 is-active"></div>
+    <form style="" action="get">
+    <h1 class="heading">Contact Form</h1>
+    <div class="megacontainer">
+    <div class="container2">
+        <h4 style="text-align: left">Let's Get in Touch</h4>
+        <p style="margin-bottom: 3em">I'm open to suggestions or just to have a chat.</p>
+       <!--  <div class="pic1">
+        <div class="photo"><span class="fa fa-map-marker" ></span></div><p class= "address">Address:123, ABC, New York City, NY 100023</p>
+        </div> -->
+        <div class="pic1">
+            <div class="photo"><span class="fa fa-phone"></span></div><p class= "address">Phone:+918160645643</p>
+        </div>
+        <div class="pic1">
+            <div class="photo"><span class="fa fa-paper-plane"></span></div><p class= "address">Email: rahulgaur.iitr@gmail.com</p>
+        </div>
+        <div class="pic1">
+            <div class="photo"><span class="fa fa-globe"></span></div><p class= "address">Website: rahulgaur.in</p>
+        </div>
+    
+    </div>
+    <div class="container">
+        <p class="heading2">Get in Touch</p>
+        <div class="container3">
+        <div class="input-group">
+            <input type="text" name="name" id="name" required class="input">
+            <label for="name" class="input-label">Name</label>
+        </div>
+        <div class="input-group2">
+            <input type="text"  name="phone" id="phone" required class="input">
+            <label for="phone" class="input-label">Phone Number</label>
+        </div>
+        </div>
+        <p>Subject:</p>
+        <input type="text" name="text" id="text" style="width:100%" class="input2">
+        <p>Message:</p>
+        <input type="text" name="mess" id="mess" style="width:100%" class="input2">
+        <button onclick="sendEmailDefault()" name="name" value="value" type="submit" class="sub">Send Message</button>
+    </div>
+    </div>
+
+    </form>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script>
+        window.onload = () => {
+      const transition_el = document.querySelector('.transition');
+      setTimeout(()=>{
+        transition_el.classList.remove('is-active');
+      },500);
+    }
+    </script>
+    <script>
+        function sendEmailDefault(){
+            var name = document.getElementById("name").value;
+            var email = "rahulgaur.iitr@gmail.com";
+            var subject = document.getElementById("text").value;
+            var msgBody = document.getElementById("mess").value;
+            if (name.trim() === "" || subject.trim() === "") {
+                alert("Please enter a value in the input field.");
+            } 
+            else{
+                window.open(`mailto:${email}?subject=${subject}&body=${msgBody}`);       
+            }
+        }
+    </script>
+    <script>
+        var makeItRain = function() {
+  //clear out everything
+  $('.rain').empty();
+
+  var increment = 0;
+  var drops = "";
+  var backDrops = "";
+
+  while (increment < 100) {
+    //couple random numbers to use for various randomizations
+    //random number between 98 and 1
+    var randoHundo = (Math.floor(Math.random() * (98 - 1 + 1) + 1));
+    //random number between 5 and 2
+    var randoFiver = (Math.floor(Math.random() * (5 - 2 + 1) + 2));
+    //increment
+    increment += randoFiver;
+    //add in a new raindrop with various randomizations to certain CSS properties
+    drops += '<div class="drop" style="left: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+    backDrops += '<div class="drop" style="right: ' + increment + '%; bottom: ' + (randoFiver + randoFiver - 1 + 100) + '%; animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"><div class="stem" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div><div class="splat" style="animation-delay: 0.' + randoHundo + 's; animation-duration: 0.5' + randoHundo + 's;"></div></div>';
+  }
+
+  $('.rain.front-row').append(drops);
+  $('.rain.back-row').append(backDrops);
+}
+
+$('.splat-toggle.toggle').on('click', function() {
+  $('body').toggleClass('splat-toggle');
+  $('.splat-toggle.toggle').toggleClass('active');
+  makeItRain();
+});
+
+$('.back-row-toggle.toggle').on('click', function() {
+  $('body').toggleClass('back-row-toggle');
+  $('.back-row-toggle.toggle').toggleClass('active');
+  makeItRain();
+});
+
+$('.single-toggle.toggle').on('click', function() {
+  $('body').toggleClass('single-toggle');
+  $('.single-toggle.toggle').toggleClass('active');
+  makeItRain();
+});
+
+makeItRain();
+    </script>
+</body>
+</html>
