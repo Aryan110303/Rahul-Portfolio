@@ -1213,8 +1213,8 @@ footer .wrapper {
     transition: transform 200ms ease-in;
   }
   img{
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: auto;
   }
   .topbar_links{
     width: 50%;
