@@ -86,8 +86,8 @@ body {
   z-index: 100;
 }
 .navbar img{
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: auto;
 }
 .navbar_links{
   width: 50%;
@@ -873,7 +873,8 @@ Main Components
 }
 .logo{
   transform: scale(1.8);
-  margin-left: 10px !important;
+  margin-top: 8px !important;
+  margin-left: 12px !important;
 }
 .btn_wrap {
   height: 109px !important;
